@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="author" name="Gabriel Freitas Souza">
+
+    <link rel="icon" href="./favicons/favicon-16x16.png">
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="shortcut icon" href="favicons/favicon.ico" type="image/x-icon">
+
+    <title>Super Mario Jump</title>
+</head>
+
+<body>
+    <div class="aviso" id="boasVindas">
+        <div class="game-over">
+            <h1>Bem Vindos(as) ao Super Mario Jump</h1>
+            <h2>Clique no botão a baixo <br> para iniciar o jogo <br> boa sorte. </h2>
+            <div class="button">
+                <button onclick="iniciar()" class="btn">Iniciar</button>
+
+            </div>
+        </div>  
+    </div>
+    <div class="aviso" id="aviso">
+        <div class="game-over">
+            <h1>Você Perdeu</h1>
+            <h2>Mas não desista, <br> tente novamente clicando no botão <br> abaixo </h2>
+            <div class="button">
+                <button onclick="recarregar()" class="btn">Reiniciar</button>
+
+            </div>
+        </div>
+    </div>
+    <audio src="./audio/overworld.wav" autoplay></audio>
+    <div class="game-board">
+
+      
+
+        <img src="./img/sun.png" class="sun">
+        <img src="./img/star-shine.gif" class="star">
+        <img src="./img/clouds.png" class="nuvens">
+        <img src="./img/tails.gif" class="tails">
+        <img src="./img/mario-initial.png" class="mario" id="mario">
+        <img src="./img/pipe.png" class="pipe">
+
+    </div>
+
+    <div class="ground">
+        <div class="counter">
+            <h3>Pontos: &nbsp; <span>0</span></h3>
+            
+        </div>
+    </div>
+
+    <script src="js/script.js">
+
+    </script>
+</body>
+
+</html>

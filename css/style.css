@@ -1,0 +1,281 @@
+@import url('https://fonts.googleapis.com/css2?family=Oxanium:wght@300;400;500;600;700;800&display=swap');
+
+:root {
+    --dia: linear-gradient(to bottom, rgb(93, 195, 250), rgba(204, 218, 250, 0.616));
+    --noite: linear-gradient(to bottom, rgb(14, 3, 72), rgba(5, 44, 136, 0.616));
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Oxanium', cursive;
+}
+
+.game-board {
+    width: 100%;
+    height: 70vh;
+    border-bottom: 15px solid rgb(36, 138, 27);
+    margin: 0 auto;
+    position: relative;
+    overflow: hidden;
+    background: var(--dia);
+}
+
+#aviso {
+    display: none;
+}
+
+
+.aviso{
+    width: 100vw;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: absolute;
+    z-index: 1;
+}
+
+.game-over{
+    width: 50vw;
+    height: 60vh;
+    background: linear-gradient(to top, rgba(0, 157, 255, 0.3), rgba(135, 198, 237, 0.3));
+    border-radius: 25px;
+    border: 1px solid rgb(150, 200, 238);
+    box-shadow: inset 0 0 45px #fff;
+}
+
+.game-over h1{
+    width: 100%;
+    height: 30%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.game-over h2{
+    width: 100%;
+    height: 40%;
+    text-align: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.game-over .button{
+    width: 100%;
+    height: 30%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.btn {
+    width: 250px;
+    height: 60px;
+    color: rgb(2, 59, 76);
+    background: linear-gradient(white, white) padding-box,
+        linear-gradient(to top, darkblue, rgb(112, 189, 237)) border-box;
+    border-radius: 15px;
+    border: 2px solid transparent;
+    cursor: pointer;
+}
+
+.ground {
+    background: rgb(54, 48, 32);
+    height: 30vh;
+}
+
+.counter {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.counter h3{
+    color: #fff;
+    font-size: 50px;
+}
+.counter h3 span{
+    color: rgb(34, 192, 223);
+}
+
+.pipe {
+    position: absolute;
+    bottom: 0;
+    width: 70px;
+    height: 70px;
+    /* animation-name: pipe-animation; */
+    animation-duration: 1.8s;
+    animation-iteration-count: infinite;
+    animation-timing-function: linear;
+}
+
+.mario {
+    width: 80px;
+    left: 10%;
+    position: absolute;
+    bottom: 0;
+    
+}
+
+.sun {
+    position: absolute;
+    width: 125px;
+    /* animation: sun-animation 15s infinite linear; */
+}
+
+.nuvens {
+    position: absolute;
+    width: 550px;
+    /* animation: nuvens-animation 30s infinite linear; */
+}
+
+.star {
+    position: absolute;
+    width: 100vw;
+    display: none;
+}
+
+.tails {
+    position: absolute;
+    width: 120px;
+    animation: tails-animation 15s infinite linear
+}
+
+.tails-top {
+
+    animation: tails-top-animation 1s ease-out;
+}
+
+.jump {
+    animation: jump 500ms ease-out;
+
+}
+
+.mario-dead {
+    animation: marioDead-animation 2s ease;
+}
+
+
+@keyframes pipe-animation {
+    from {
+        right: -80px;
+    }
+
+    to {
+        right: 100%;
+    }
+}
+
+@keyframes jump {
+    0% {
+        bottom: 0;
+    }
+
+    30% {
+        bottom: 140px;
+    }
+
+    40% {
+        bottom: 150px;
+    }
+
+    50% {
+        bottom: 150px;
+    }
+
+    60% {
+        bottom: 150px;
+    }
+
+    70% {
+        bottom: 140px;
+    }
+
+    100% {
+        bottom: 0;
+    }
+}
+
+@keyframes marioDead-animation {
+    0% {
+        bottom: 0;
+    }
+    50%{
+        bottom: 80px;
+    }
+    100%{
+        bottom: -150px;
+    }
+    
+        
+}
+
+@keyframes sun-animation {
+    0% {
+        right: -125px;
+        top: 50px;
+    }
+
+    30% {
+        right: 30%;
+        top: 20px
+    }
+
+    40% {
+        right: 40%;
+        top: 10px;
+    }
+
+    50% {
+        right: 50%;
+        top: 0;
+    }
+
+    60% {
+        right: 60%;
+        top: 10px;
+    }
+
+    70% {
+        right: 70%;
+        top: 20px;
+    }
+
+    100% {
+        right: 100%;
+        top: 50px;
+    }
+}
+
+@keyframes nuvens-animation {
+    from {
+        right: -550px;
+    }
+
+    to {
+        right: 100%
+    }
+}
+
+@keyframes tails-animation {
+    from {
+        left: -120px;
+    }
+
+    to {
+        left: 250%
+    }
+}
+
+@keyframes tails-top-animation {
+    from {
+        top: 0;
+    }
+
+    to {
+        top: -150px;
+    }
+}
